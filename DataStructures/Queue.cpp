@@ -46,6 +46,11 @@ int dequeue(Queue* q)
 	int i = 0; // flag variable
 	int dequeuedValue = EMPTY_SPOT; // the value that just got out of the queue - default value is the empty spot
 
+	if (isEmpty(q)) // if the queue is empty - return -1
+	{
+		return -1;
+	}
+
 	dequeuedValue = q->queueArray[q->size - 1]; // getting the first value in the queue array
 
 	for (i = q->size - 1; i > 0; i--) // changing the values in the queue array accordingly

@@ -1,7 +1,7 @@
 #ifndef QUEUE_H
 #define QUEUE_H
 
-#define EMPTY_SPOT -1
+#define EMPTY_SPOT 0
 
 
 /* a queue contains positive integer values. */
