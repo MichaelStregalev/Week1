@@ -2,7 +2,7 @@
 
 Node* createNode(unsigned int value)
 {
-	Node* newNode = new Node(); // allocating memory for a new node
+	Node* newNode = new Node; // allocating memory for a new node // removed () - unnecessary
 
 	newNode->next = nullptr; // reseting the next pointer to null
 	newNode->value = value; // inputting the value
@@ -29,12 +29,13 @@ void addNode(Node** head, unsigned int value)
 unsigned int deleteNode(Node** head)
 {
 	Node* temp = *head; // temporary holding of the head node
-	unsigned int popValue = 0; // representing the value that is held by the node that is going to be deleted
-
-	popValue = temp->value;
+	unsigned int popValue = -1; // representing the value that is held by the node that is going to be deleted
+	// default popValue -> -1!
 
 	if (*head) // if the list is not empty..
 	{
+		popValue = temp->value; // changed the location - since if a linked list was empty you can not access a nullptr.
+
 		*head = (*head)->next; // changing the new head to the node after the previous head
 	}
 
