@@ -34,10 +34,12 @@ This functions gets the double pointer of the head of the linked list.
 This function is responsible for the deletion of the head node of the linked list, and updating the head of the linked list
 the the next node after the head.
 
+This function returns the value that was held by the node that was just deleted.
+
 ****The function also releases the memory used****
 
 */
-void deleteNode(Node** head);
+unsigned int deleteNode(Node** head);
 
 /*
 This function gets the double pointer of the head of the linked list.

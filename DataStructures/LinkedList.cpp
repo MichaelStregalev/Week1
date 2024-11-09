@@ -26,9 +26,12 @@ void addNode(Node** head, unsigned int value)
 	}
 }
 
-void deleteNode(Node** head)
+unsigned int deleteNode(Node** head)
 {
 	Node* temp = *head; // temporary holding of the head node
+	unsigned int popValue = 0; // representing the value that is held by the node that is going to be deleted
+
+	popValue = temp->value;
 
 	if (*head) // if the list is not empty..
 	{
@@ -36,6 +39,8 @@ void deleteNode(Node** head)
 	}
 
 	delete temp;
+
+	return popValue;
 }
 
 void printNodeList(Node** head)
