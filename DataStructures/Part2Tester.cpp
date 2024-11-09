@@ -1,4 +1,4 @@
-#include "Stack.h"
+/*#include "Stack.h"
 #include "Utils.h"
 #include <windows.h> // WinApi header - needed for setting console color
 
@@ -242,4 +242,4 @@ int main()
 
 
 	return 0;
-}
+}*/
